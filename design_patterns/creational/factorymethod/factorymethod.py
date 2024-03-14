@@ -26,10 +26,10 @@ class Truck(Vehicle):
 
 class FactoryMethodPattern:
     @staticmethod
-    def create(type):
-        if type == "sedan":
+    def create(vehicle_type):
+        if vehicle_type == "sedan":
             return Car()
-        if type == "truck":
+        if vehicle_type == "truck":
             return Truck()
         raise ValueError("Unknown vehicle type")
 

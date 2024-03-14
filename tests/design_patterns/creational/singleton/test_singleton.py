@@ -1,4 +1,4 @@
-from creational.singleton.creational.singleton.singleton import Car, SingletonPattern
+from design_patterns.creational.singleton.singleton import Car, SingletonPattern
 
 
 def test_singleton_instance():
