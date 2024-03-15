@@ -59,7 +59,10 @@ class EngineFactoryFactory:
 #         engine = factory.create_engine()
 #         print(engine)
 
-# demonstrate of the abstract factory pattern without creating wrapping class
+# if __name__ == "__main__":
+#     AbstractFactoryPattern.main()
+
+# Demonstrate of the abstract factory pattern without creating wrapping class
 if __name__ == "__main__":
     vehicle = input("What type of vehicle will you be driving today, car or truck?")
     factory = EngineFactoryFactory.create_factory(vehicle)
