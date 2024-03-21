@@ -24,7 +24,7 @@ class SearchCommand:
         return self._http_client.post(self._search_request)
 
 
-# Demonstrate if you want to complete Object-Oriented like Java
+# If you want to complete Object-Oriented like Java
 # class CommandPattern:
 #     @staticmethod
 #     def main():

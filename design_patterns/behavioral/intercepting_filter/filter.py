@@ -14,7 +14,7 @@ class SomeResponse:
 class Filter(ABC):
     @abstractmethod
     def filter(self, request):
-        pass
+        raise NotImplementedError
 
 
 class DebugFilter(Filter):

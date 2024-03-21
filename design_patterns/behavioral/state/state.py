@@ -5,7 +5,7 @@ from typing import override
 class State(ABC):
     @abstractmethod
     def write_name(self, name):
-        pass
+        raise NotImplementedError
 
 
 class LowerCaseState(State):

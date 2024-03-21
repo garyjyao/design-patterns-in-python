@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 class BillingStrategy(ABC):
     @abstractmethod
     def actual_amount(self, amount, quantity):
-        pass
+        raise NotImplementedError
 
 
 class NormalBillingStrategy(BillingStrategy):
