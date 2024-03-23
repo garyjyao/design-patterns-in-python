@@ -4,11 +4,19 @@ from typing import override
 
 class EngineComponent(ABC):
     @abstractmethod
+    def get_name(self):
+        raise NotImplementedError
+
+    @abstractmethod
     def operate(self):
         raise NotImplementedError
 
 
 class Cylinder(EngineComponent):
+    @override
+    def get_name(self):
+        return "Cylinder"
+
     @override
     def operate(self):
         pass
@@ -17,10 +25,12 @@ class Cylinder(EngineComponent):
 class TemperatureSensingComponent(EngineComponent):
     def __init__(self, component):
         self.component = component
-        self.location = "Engine"
+
+    def get_name(self):
+        pass
 
     def measure_temperature(self, message):
-        print(f"Measuring temperature at '{self.location}' {message}")
+        print(f"Measuring temperature at '{self.component.get_name()}' {message}")
 
     def operate(self):
         self.measure_temperature("before")
