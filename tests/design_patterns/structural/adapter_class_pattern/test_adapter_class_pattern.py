@@ -1,5 +1,5 @@
 from unittest.mock import MagicMock
-from design_patterns.structural.adapter_pattern.gps_adapter import GpsDeviceAdapter, Car, Location, GpsDevice
+from design_patterns.structural.adapter_class_pattern.adapter_class_pattern import GpsDeviceAdapter, Car, Location, GpsDevice
 
 
 def test_gps_device():

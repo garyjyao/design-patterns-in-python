@@ -1,5 +1,5 @@
 from unittest.mock import patch
-from design_patterns.structural.adapter_pattern.adapter_pattern import OldPrinter, PrinterAdapter, ModernPrinter
+from design_patterns.structural.adapter_object_pattern.old_new_printer import OldPrinter, PrinterAdapter, ModernPrinter
 
 
 class TestAdapterPattern:
