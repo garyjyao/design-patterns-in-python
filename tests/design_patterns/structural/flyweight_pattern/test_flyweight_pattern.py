@@ -35,7 +35,9 @@ def test_coffee_flavour_cache():
     CoffeeFlavour.intern("Cappuccino")
 
     # Assert
-    # flyweight pattern ensures that there is only one instance of the object in the cache
+    """
+    flyweight pattern ensures that there is only one instance of the object in the cache
+    """
     assert CoffeeFlavour.flavours_in_cache() == 1
 
 
@@ -55,6 +57,8 @@ def test_service():
     shop.service()
 
     # Assert
-    # The order object is called as a function
+    """
+    The order object is called as a function
+    """
     shop.orders[0].assert_called_once()
     shop.orders[1].assert_called_once()

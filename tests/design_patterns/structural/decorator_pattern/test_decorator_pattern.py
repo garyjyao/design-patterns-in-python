@@ -6,6 +6,9 @@ from design_patterns.structural.decorator_pattern.decorator_pattern import *
 @patch.object(Cylinder, 'operate')
 @patch.object(TemperatureSensingComponent, 'measure_temperature')
 def test_decorator_pattern(mocked_measure_temperature, mocked_cylinder_operate):
+    """
+    Test for Decorator class' method decorate the Concrete Component method
+    """
     # Assign
     component = Cylinder()
     temperature_sensing_component = TemperatureSensingComponent(component)
@@ -19,6 +22,9 @@ def test_decorator_pattern(mocked_measure_temperature, mocked_cylinder_operate):
 
 
 def test_cylinder():
+    """
+    Test for Concrete Class
+    """
     # Assign
     component = Cylinder()
 
@@ -26,11 +32,14 @@ def test_cylinder():
     component.get_name()
     component.operate()
 
-    # Assert
+    # Assert (Nothing went wrong)
     assert True
 
 
 def test_temperature_sensing_component():
+    """
+    Test for Decorator Class
+    """
     # Assign
     component = Cylinder()
     temperature_sensing_component = TemperatureSensingComponent(component)
@@ -39,5 +48,5 @@ def test_temperature_sensing_component():
     temperature_sensing_component.get_name()
     temperature_sensing_component.operate()
 
-    # Assert
+    # Assert (Nothing went wrong)
     assert True

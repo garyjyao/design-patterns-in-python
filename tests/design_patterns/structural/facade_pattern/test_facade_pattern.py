@@ -16,6 +16,9 @@ class TestCar:
         car.start_engine()
 
         # Assert
+        """
+        start_engine is a facade method that calls the subsystems
+        """
         car.electrical_system.switch_on.assert_called_once()
         car.intake_system.open_throttle.assert_called_once()
         car.fuel_system.inject_fuel.assert_called_once()
