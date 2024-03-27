@@ -3,15 +3,12 @@
 A collection of design patterns implemented in Python.
 
 ## Creational Patterns
+
 | Name                                                        | Description                                                        |
 |-------------------------------------------------------------|--------------------------------------------------------------------|
 | [Singleton](./design_patterns/creational/singleton_pattern) | simple access point to a global a class that has only one instance |
 
 ## Structural Patterns
-| Name                                                        | Description                                                                                                              |
-|-------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [Singleton](./design_patterns/creational/singleton_pattern) | Wraps an existing class with a new interface using inheritance so that it becomes compatible with the client's interface |
-
 
 ## Behavioral Patterns
 
