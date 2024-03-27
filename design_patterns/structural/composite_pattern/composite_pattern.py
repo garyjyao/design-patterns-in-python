@@ -23,6 +23,10 @@ class Composite(Component):
         self.children = children
 
     def operation(self):
+        """
+        Composite objects delegate the actual work to their children.
+        This method calls the operation method on each child recursively.
+        """
         for child in self.children:
             child.operation()
 
