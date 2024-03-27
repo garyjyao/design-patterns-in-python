@@ -4,10 +4,11 @@ A collection of design patterns implemented in Python.
 
 ## Creational Patterns
 
-| Name                                                        | Description                                                         |
-|-------------------------------------------------------------|---------------------------------------------------------------------|
-| [Prototype](./design_patterns/creational/prototype_pattern) | Duplicate(Clone) existing object so it's fast and exactly the same. |
-| [Singleton](./design_patterns/creational/singleton_pattern) | Simple access point to a global a class that has only one instance. |
+| Name                                                                | Description                                                         |
+|---------------------------------------------------------------------|---------------------------------------------------------------------|
+| [FactoryMethod](./design_patterns/creational/factorymethod_pattern) | create object without exposing the creation logic. |
+| [Prototype](./design_patterns/creational/prototype_pattern)         | Duplicate(Clone) existing object so it's fast and exactly the same. |
+| [Singleton](./design_patterns/creational/singleton_pattern)         | Simple access point to a global a class that has only one instance. |
 
 ## Structural Patterns
 
