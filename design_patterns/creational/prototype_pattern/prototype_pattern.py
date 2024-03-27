@@ -3,6 +3,10 @@ import copy
 
 class VehiclePart:
     def clone(self):
+        """
+        Declare the common interface for cloning objects.
+        :return:
+        """
         return copy.deepcopy(self)
 
 
