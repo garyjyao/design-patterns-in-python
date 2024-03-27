@@ -40,5 +40,11 @@ class CarBuilder:
 
 
 if __name__ == "__main__":
+    # """
+    # The CarBuilder class is used to construct a Car object.
+    # The CarBuilder class has methods to set the engine, body, and wheel of the car.
+    # This can be further simplified by using a Director class to manage the construction of the Car object.
+    # such as, car = CarBuilderDirector.construct()
+    # """
     car = CarBuilder().engine('Petrol').body('Sedan').wheel('Steel').build()
     print(f'Car: {car.engine}, {car.body}, {car.wheel}')
