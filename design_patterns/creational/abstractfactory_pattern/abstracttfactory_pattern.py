@@ -66,5 +66,7 @@ class EngineFactoryFactory:
 if __name__ == "__main__":
     vehicle = input("What type of vehicle will you be driving today, car or truck?")
     factory = EngineFactoryFactory.create_factory(vehicle)
+    # The create_engine method will return the appropriate engine based on the factory type
+    # The client code does not need to know the type of engine to create
     engine = factory.create_engine()
     print(engine)
