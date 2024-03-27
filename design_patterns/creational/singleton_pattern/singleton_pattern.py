@@ -3,6 +3,9 @@ class Car:
 
 
 class SingletonPattern:
+    """
+    _car_instance is the single instance of the Car class that will be shared by all clients
+    """
     _car_instance = Car()
 
     @staticmethod
