@@ -5,6 +5,10 @@ from design_patterns.structural.adapter_object_pattern.old_new_printer import Ol
 class TestAdapterPattern:
     @patch.object(OldPrinter, 'print_old')
     def test_old_printer_adapter(self, mock_print_old):
+        """
+        When we use the print method of the old printer adapter, it should call the print_old method of the old printer.
+        """
+
         # Assign
         old_printer_adapter = PrinterAdapter(OldPrinter())
 
@@ -16,6 +20,10 @@ class TestAdapterPattern:
 
 
 class TestModernPrinter:
+    """
+    The ModernPrinter class directly implements the Printer interface with a print method.
+    """
+
     @patch.object(ModernPrinter, 'print')
     def test_modern_printer(self, mock_print):
         # Assign
@@ -29,6 +37,10 @@ class TestModernPrinter:
 
 
 class TestOldPrinter:
+    """
+    The OldPrinter class has a print method that prints messages using an old mechanism.
+    """
+
     @patch.object(OldPrinter, 'print_old')
     def test_old_printer(self, mock_print_old):
         # Assign

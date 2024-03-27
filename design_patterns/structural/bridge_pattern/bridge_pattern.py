@@ -3,24 +3,41 @@ from typing import override
 
 
 class Logger(ABC):
+    """
+    The Logger interface declares the operations that all concrete loggers must implement.
+    It is one dimension of the bridge pattern.
+    """
+
     @abstractmethod
     def log(self, message):
         raise NotImplementedError
 
 
 class FileLogger(Logger):
+    """
+    The FileLogger class is one of the concrete loggers, evolved from the Logger interface.
+    """
+
     @override
     def log(self, message):
         print(f"FILE {message}")
 
 
 class ConsoleLogger(Logger):
+    """
+    The ConsoleLogger class is one of the concrete loggers, evolved from the Logger interface.
+    """
+
     @override
     def log(self, message):
         print(f"CONSOLE {message}")
 
 
 class BankAccount:
+    """
+    The BankAccount class is the other object, evolved independently of Logger object.
+    """
+
     def __init__(self):
         self.logger = FileLogger()
 
@@ -37,5 +54,6 @@ class BankAccount:
 if __name__ == "__main__":
     account = BankAccount()
     account.deposit(100)
+    # Logger Class change does not affect the BankAccount class
     account.set_logger(ConsoleLogger())
     account.withdraw(100)

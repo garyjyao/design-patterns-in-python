@@ -3,11 +3,19 @@ class Location:
 
 
 class GpsDevice:
+    """
+    The adaptee class has a different interface than the target interface.
+    """
+
     def get_location(self):
         return Location()
 
 
 class GpsDeviceAdapter(GpsDevice):
+    """
+    The adapter class adapts the interface of the adaptee class to the target interface using inheritance.
+    """
+
     def get_location(self):  # pylint: disable=useless-super-delegation
         return super().get_location()
 
@@ -17,6 +25,9 @@ class Car:
         self.adapter = adapter
 
     def monitor_location(self):
+        """
+        The client class uses the target interface via the adapter class.
+        """
         location = self.adapter.get_location()
         return location
 

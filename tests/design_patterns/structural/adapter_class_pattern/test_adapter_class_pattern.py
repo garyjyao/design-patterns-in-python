@@ -3,6 +3,9 @@ from design_patterns.structural.adapter_class_pattern.adapter_class_pattern impo
 
 
 def test_gps_device():
+    """
+    The adaptee class has a different interface than the target interface.
+    """
     # Assign
     gps_device = GpsDevice()
 
@@ -14,6 +17,9 @@ def test_gps_device():
 
 
 def test_gps_device_adapter():
+    """
+    The adapter class adapts the interface of the adaptee class to the target interface.
+    """
     # Assign
     # Create a mock for the GpsDeviceAdapter
     mock_adapter = MagicMock(GpsDeviceAdapter)
@@ -23,11 +29,11 @@ def test_gps_device_adapter():
     car = Car(mock_adapter)
 
     # Act
-    # Call the monitor_location method
+    # Call the monitor_location method (target interface method)
     location = car.monitor_location()
 
     # Assert
-    # Assert that the get_location method was called
+    # Assert that the get_location method was called (adaptee method)
     mock_adapter.get_location.assert_called_once()
 
     # Assert that the returned location is an instance of Location
